@@ -3,6 +3,7 @@ import sunny from "../assets/Sunny.svg";
 import rainy from "../assets/Rainy.svg";
 import partly_cloudy from "../assets/PartlyCloudy.svg";
 import cloudy from "../assets/Cloudy.svg";
+import error from "../assets/Error.svg";
 
 function Location({ data, location, setLocation }) {
   const foundCity = data.find((city) => city.city === location) ?? false;
@@ -23,7 +24,7 @@ function Location({ data, location, setLocation }) {
       <div className="img-container">
         <img
           className="card-img-top"
-          src={weather}
+          src={foundCity ? weather : error}
           alt="Card image cap"
           id="icon"
         />
@@ -36,7 +37,7 @@ function Location({ data, location, setLocation }) {
             <h5 className="card-text">{foundCity.forecast}</h5>
           </>
         ) : (
-          "Location not found"
+          <h3 className="card-title">Location not found</h3>
         )}
       </div>
     </div>
