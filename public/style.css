@@ -53,6 +53,10 @@ html {
   font-size: 4rem;
 }
 
+.error {
+  text-align: center;
+}
+
 /* Form and input styling */
 .form {
   display: flex;

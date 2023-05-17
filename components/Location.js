@@ -37,7 +37,7 @@ function Location({ data, location, setLocation }) {
             <h5 className="card-text">{foundCity.forecast}</h5>
           </>
         ) : (
-          <h3 className="card-title">Location not found</h3>
+          <h3 className="error">Location not found</h3>
         )}
       </div>
     </div>
