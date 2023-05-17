@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import cities from "./data";
 import WeatherCard from "./components/WeatherCard";
+
 
 function App() {
   return (
